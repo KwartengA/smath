@@ -1,6 +1,9 @@
 package com.trykb.smath;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +12,11 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class Result extends AppCompatActivity {
+
+    TextView result;
+    Button playAgain;
+    Button exit;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,5 +28,25 @@ public class Result extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        result = findViewById(R.id.textViewScoreKeep);
+        playAgain = findViewById(R.id.buttonPlayAgain);
+        exit = findViewById(R.id.buttonexit);
+
+
+        playAgain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        exit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
     }
 }

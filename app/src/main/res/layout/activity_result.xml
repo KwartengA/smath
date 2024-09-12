@@ -7,6 +7,60 @@
     android:layout_height="match_parent"
     tools:context=".Result"
     android:orientation="vertical"
-    android:background="@drawable/seventh">
+    android:background="@drawable/fifth">
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:text="TextView"
+        android:textColor="@color/design_default_color_secondary_variant"
+        android:textSize="34sp"
+        tools:text="Congratulations" />
+
+    <TextView
+        android:id="@+id/textViewScoreKeep"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center_horizontal"
+        android:text="TextView"
+        android:textSize="24sp"
+        tools:text="Score : 20" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buttonPlayAgain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="120dp"
+            android:layout_marginEnd="28dp"
+            android:layout_marginRight="28dp"
+            android:layout_weight="1"
+            android:text="PLAY AGAIN"
+            android:textSize="16sp"
+            app:backgroundTint="#19112B" />
+
+        <Button
+            android:id="@+id/buttonexit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="120dp"
+            android:layout_marginEnd="28dp"
+            android:layout_marginRight="28dp"
+            android:layout_weight="1"
+            android:text="EXIT"
+            android:textSize="16sp"
+            app:backgroundTint="#241C3C" />
+    </LinearLayout>
 </LinearLayout>
