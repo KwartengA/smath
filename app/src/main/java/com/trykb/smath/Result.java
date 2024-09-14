@@ -1,5 +1,6 @@
 package com.trykb.smath;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -16,6 +17,8 @@ public class Result extends AppCompatActivity {
     TextView result;
     Button playAgain;
     Button exit;
+    int score = 0;
+
 
 
     @Override
@@ -30,13 +33,22 @@ public class Result extends AppCompatActivity {
         });
 
         result = findViewById(R.id.textViewScoreKeep);
+
         playAgain = findViewById(R.id.buttonPlayAgain);
         exit = findViewById(R.id.buttonexit);
+
+        Intent intent = getIntent();
+        score = intent.getIntExtra("score",0);
+        String userScore = String.valueOf(score) ;
+        result.setText(" "+userScore);
 
 
         playAgain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(Result.this,MainActivity.class);
+                startActivity(intent);
+                finish();
 
             }
         });
@@ -44,9 +56,12 @@ public class Result extends AppCompatActivity {
         exit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+               finish();
 
             }
         });
+
+
 
     }
 }

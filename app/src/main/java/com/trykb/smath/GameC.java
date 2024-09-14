@@ -1,11 +1,13 @@
 package com.trykb.smath;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -97,6 +99,19 @@ public class GameC extends AppCompatActivity {
               answer.setText("");
                 Continuegame();
                 resetTimer();
+
+                if (userLife <= 0)
+                {
+                    Toast.makeText(getApplicationContext(),"Game Over",Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent(GameC.this,Result.class);
+                    intent.putExtra("score",userScore);
+                    startActivity(intent);
+                    finish();
+                }
+                else
+                {
+                    Continuegame();
+                }
 
 
             }
